@@ -87,7 +87,7 @@ Support recommendation, similarity matching, and nearest-neighbor retrieval work
 - **Backup APIs and flows** documented in [docs/backup-system.md](./docs/backup-system.md).
 - **Operational logging and instrumentation** documented in [docs/logs.md](./docs/logs.md) and [docs/mdbx-instrumentation.md](./docs/mdbx-instrumentation.md).
 - **CPU-targeted builds** for AVX2, AVX512, NEON, and SVE2 deployments.
-- **Docker deployment options** for local and server environments.
+- **Docker deployment options** for local and environments.
 
 ## API and Clients
 
