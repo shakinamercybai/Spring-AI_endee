@@ -1,11 +1,10 @@
 ## _Roadmap to Spring Certification_ <br />
-Updated by Shakina
 
 Continuing to improve my dev skills, now playing with Spring-AI and OpenAPI to be ready for the challenge of developing
 an application that will check a LLM to provide a specific grade to a transaction based on the information collected 
 from the customer
 
-## contents
+## _Table of contents_
 
 - [_Overview_](#overview)
 - [_Requirements_](#requirements)
@@ -106,13 +105,11 @@ public class OpenAIServiceImpl  implements OpenAIService{
     return response.getResult().getOutput().getContent();
   }
 
-- **Vector search** for AI retrieval and semantic similarity workloads.
-- **Hybrid retrieval support** with sparse vector capabilities documented in [docs/sparse.md](./docs/sparse.md).
-- **Payload filtering** for structured retrieval logic documented in [docs/filter.md](./docs/filter.md).
-- **Backup APIs and flows** documented in [docs/backup-system.md](./docs/backup-system.md).
-- **Operational logging and instrumentation** documented in [docs/logs.md](./docs/logs.md) and [docs/mdbx-instrumentation.md](./docs/mdbx-instrumentation.md).
-- **CPU-targeted builds** for AVX2, AVX512, NEON, and SVE2 deployments.
-- **Docker deployment options** for local and environments.
+  @Override
+  public Answer getAnswer(Question question) {
+    PromptTemplate promptTemplate = new PromptTemplate(question.question());
+    Prompt prompt = promptTemplate.create();
+    ChatResponse response = chatModel.call(prompt);
 
     return new Answer(response.getResult().getOutput().getContent());
   }
