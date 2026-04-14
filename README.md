@@ -4,7 +4,7 @@ Continuing to improve my dev skills, now playing with Spring-AI and OpenAPI to b
 an application that will check a LLM to provide a specific grade to a transaction based on the information collected 
 from the customer
 
-## _Table of contents_
+## contents
 
 - [_Overview_](#overview)
 - [_Requirements_](#requirements)
